@@ -12,7 +12,7 @@ test('CHANNEL_DISCONNECTED', () => {
 
 describe('RECEIVED_NEW_PENDING_TRANSACTION_BATCH', () => {
   test('single transaction', () => {
-    const state = Object.assign({}, initialState, {items:[]})
+    const state = Object.assign({}, initialState, { items: [] })
     const action = {
       type: 'RECEIVED_NEW_PENDING_TRANSACTION_BATCH',
       msgs: [{
@@ -27,7 +27,7 @@ describe('RECEIVED_NEW_PENDING_TRANSACTION_BATCH', () => {
     expect(output.pendingTransactionCount).toEqual(1)
   })
   test('large batch of transactions', () => {
-    const state = Object.assign({}, initialState, {items:[]})
+    const state = Object.assign({}, initialState, { items: [] })
     const action = {
       type: 'RECEIVED_NEW_PENDING_TRANSACTION_BATCH',
       msgs: [{

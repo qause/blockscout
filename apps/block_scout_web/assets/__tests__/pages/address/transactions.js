@@ -11,7 +11,7 @@ describe('RECEIVED_NEW_TRANSACTION', () => {
     }
     const output = reducer(state, action)
 
-    expect(output.items).toEqual([ 'another transaction html', 'transaction html' ])
+    expect(output.items).toEqual(['another transaction html', 'transaction html'])
   })
 
   test('when channel has been disconnected', () => {
@@ -39,7 +39,7 @@ describe('RECEIVED_NEW_TRANSACTION', () => {
     }
     const output = reducer(state, action)
 
-    expect(output.items).toEqual([ 'transaction html' ])
+    expect(output.items).toEqual(['transaction html'])
   })
 
   test('adds the new transaction to state even when it is filtered by to', () => {

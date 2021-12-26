@@ -1,33 +1,33 @@
 import { prepareMethodArgs } from '../../../js/lib/smart_contract/common_helpers'
 import $ from 'jquery'
-  
+
 const oneFieldHTML =
     '<form data-function-form>' +
-    ' <input type="hidden" name="function_name" value="convertMultiple">' + 
-    ' <input type="hidden" name="method_id" value="">' + 
-    ' <div>' + 
-    '   <input type="text" name="function_input" id="first">' + 
-    ' </div>' + 
-    ' <input type="submit" value="Write">' + 
+    ' <input type="hidden" name="function_name" value="convertMultiple">' +
+    ' <input type="hidden" name="method_id" value="">' +
+    ' <div>' +
+    '   <input type="text" name="function_input" id="first">' +
+    ' </div>' +
+    ' <input type="submit" value="Write">' +
     '</form>'
 
 const twoFieldHTML =
     '<form data-function-form>' +
-    ' <input type="hidden" name="function_name" value="convertMultiple">' + 
-    ' <input type="hidden" name="method_id" value="">' + 
-    ' <div>' + 
-    '   <input type="text" name="function_input" id="first">' + 
-    ' </div>' + 
-    ' <div>' + 
-    '   <input type="text" name="function_input" id="second">' + 
-    ' </div>' + 
-    ' <input type="submit" value="Write">' + 
+    ' <input type="hidden" name="function_name" value="convertMultiple">' +
+    ' <input type="hidden" name="method_id" value="">' +
+    ' <div>' +
+    '   <input type="text" name="function_input" id="first">' +
+    ' </div>' +
+    ' <div>' +
+    '   <input type="text" name="function_input" id="second">' +
+    ' </div>' +
+    ' <input type="submit" value="Write">' +
     '</form>'
 
 test('prepare contract args | type: address[]*2', () => {
     document.body.innerHTML = twoFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "address[]",
             "name": "arg1",
@@ -53,14 +53,14 @@ test('prepare contract args | type: address[]*2', () => {
         ]
       ]
     const $functionInputs = $('[data-function-form]').find('input[name=function_input]')
-    
+
     expect(prepareMethodArgs($functionInputs, inputs)).toEqual(expectedValue)
 })
 
 test('prepare contract args | type: address', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "address",
             "name": "arg1",
@@ -71,14 +71,14 @@ test('prepare contract args | type: address', () => {
     document.getElementById('first').value = ' 0x000000000000000000 0000000000000000000000 '
     const expectedValue = ['0x0000000000000000000000000000000000000000']
     const $functionInputs = $('[data-function-form]').find('input[name=function_input]')
-    
+
     expect(prepareMethodArgs($functionInputs, inputs)).toEqual(expectedValue)
 })
 
 test('prepare contract args | type: string', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "string",
             "name": "arg1",
@@ -89,14 +89,14 @@ test('prepare contract args | type: string', () => {
     document.getElementById('first').value = '  0x0000000000000000000000000000000000000000  , 0x0000000000000000000000000000000000000001   '
     const expectedValue = ['0x0000000000000000000000000000000000000000  , 0x0000000000000000000000000000000000000001']
     const $functionInputs = $('[data-function-form]').find('input[name=function_input]')
-    
+
     expect(prepareMethodArgs($functionInputs, inputs)).toEqual(expectedValue)
 })
 
 test('prepare contract args | type: string[]', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "string[]",
             "name": "arg1",
@@ -113,7 +113,7 @@ test('prepare contract args | type: string[]', () => {
 test('prepare contract args | type: bool[]', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "bool[]",
             "name": "arg1",
@@ -130,7 +130,7 @@ test('prepare contract args | type: bool[]', () => {
 test('prepare contract args | type: bool', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "bool",
             "name": "arg1",
@@ -144,11 +144,10 @@ test('prepare contract args | type: bool', () => {
     expect(prepareMethodArgs($functionInputs, inputs)).toEqual(expectedValue)
 })
 
-
 test('prepare contract args | type: uint256', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "uint256",
             "name": "arg1",
@@ -165,7 +164,7 @@ test('prepare contract args | type: uint256', () => {
 test('prepare contract args | type: uint256[]', () => {
     document.body.innerHTML = oneFieldHTML
 
-    var inputs = [
+    const inputs = [
         {
             "type": "uint256[]",
             "name": "arg1",

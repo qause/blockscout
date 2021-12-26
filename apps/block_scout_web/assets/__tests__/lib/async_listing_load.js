@@ -16,7 +16,7 @@ describe('ADD_ITEM_KEY', () => {
     const expectedItemKey = 'expected.Key'
 
     const state = Object.assign({}, asyncInitialState)
-    const action = { type: 'ADD_ITEM_KEY', itemKey: expectedItemKey } 
+    const action = { type: 'ADD_ITEM_KEY', itemKey: expectedItemKey }
     const output = asyncReducer(state, action)
 
     expect(output.itemKey).toEqual(expectedItemKey)
@@ -26,7 +26,7 @@ describe('ADD_ITEM_KEY', () => {
 describe('START_REQUEST', () => {
   test('sets loading status to true', () => {
     const state = Object.assign({}, asyncInitialState, { loading: false })
-    const action = { type: 'START_REQUEST' } 
+    const action = { type: 'START_REQUEST' }
     const output = asyncReducer(state, action)
 
     expect(output.loading).toEqual(true)
@@ -36,7 +36,7 @@ describe('START_REQUEST', () => {
 describe('REQUEST_ERROR', () => {
   test('sets requestError to true', () => {
     const state = Object.assign({}, asyncInitialState, { requestError: false })
-    const action = { type: 'REQUEST_ERROR' } 
+    const action = { type: 'REQUEST_ERROR' }
     const output = asyncReducer(state, action)
 
     expect(output.requestError).toEqual(true)
@@ -48,7 +48,7 @@ describe('FINISH_REQUEST', () => {
     const state = Object.assign({}, asyncInitialState, {
       loading: true
     })
-    const action = { type: 'FINISH_REQUEST' } 
+    const action = { type: 'FINISH_REQUEST' }
     const output = asyncReducer(state, action)
 
     expect(output.loading).toEqual(false)
@@ -60,7 +60,7 @@ describe('ITEMS_FETCHED', () => {
     const expectedItems = [1, 2, 3]
 
     const state = Object.assign({}, asyncInitialState)
-    const action = { type: 'ITEMS_FETCHED', items: expectedItems } 
+    const action = { type: 'ITEMS_FETCHED', items: expectedItems }
     const output = asyncReducer(state, action)
 
     expect(output.items).toEqual(expectedItems)
@@ -70,7 +70,7 @@ describe('ITEMS_FETCHED', () => {
 describe('NAVIGATE_TO_OLDER', () => {
   test('sets beyondPageOne to true', () => {
     const state = Object.assign({}, asyncInitialState, { beyondPageOne: false })
-    const action = { type: 'NAVIGATE_TO_OLDER' } 
+    const action = { type: 'NAVIGATE_TO_OLDER' }
     const output = asyncReducer(state, action)
 
     expect(output.beyondPageOne).toEqual(true)
