@@ -7,7 +7,7 @@ const { ContextReplacementPlugin } = require('webpack')
 const glob = require('glob')
 const webpack = require('webpack')
 
-function transpileViewScript(file) {
+function transpileViewScript (file) {
   return {
     entry: file,
     output: {

@@ -28,7 +28,7 @@ $new-smart-contract-center-column-margin-right: 30px;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
-  margin: 0 0 70px 0;
+  margin: 0 0 70px;
   padding: 0;
   text-align: left;
 
@@ -129,7 +129,7 @@ $new-smart-contract-center-column-margin-right: 30px;
     width: #{$new-smart-contract-tooltips-width};
 
     @include media-breakpoint-down(md) {
-      padding: 10px 0 0 0;
+      padding: 10px 0 0;
       width: auto;
     }
 

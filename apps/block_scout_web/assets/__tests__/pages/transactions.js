@@ -53,7 +53,7 @@ describe('RECEIVED_NEW_TRANSACTION_BATCH', () => {
   })
 
   test('single transaction after single transaction', () => {
-    const state = Object.assign({}, initialState, { items: [ 'transaction_html' ] })
+    const state = Object.assign({}, initialState, { items: ['transaction_html'] })
     const action = {
       type: 'RECEIVED_NEW_TRANSACTION_BATCH',
       msgs: [{
@@ -62,7 +62,7 @@ describe('RECEIVED_NEW_TRANSACTION_BATCH', () => {
     }
     const output = reducer(state, action)
 
-    expect(output.items).toEqual([ 'another_transaction_html', 'transaction_html' ])
+    expect(output.items).toEqual(['another_transaction_html', 'transaction_html'])
     expect(output.transactionsBatch.length).toEqual(0)
   })
 

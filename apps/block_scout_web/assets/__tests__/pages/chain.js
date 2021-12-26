@@ -245,7 +245,7 @@ test('RECEIVED_NEW_EXCHANGE_RATE', () => {
 
 describe('RECEIVED_NEW_TRANSACTION_BATCH', () => {
   test('single transaction with no loading or errors', () => {
-    const state = Object.assign(initialState, { transactionsLoading: false, transactionError: false } )
+    const state = Object.assign(initialState, { transactionsLoading: false, transactionError: false })
     const action = {
       type: 'RECEIVED_NEW_TRANSACTION_BATCH',
       msgs: [{
@@ -259,7 +259,7 @@ describe('RECEIVED_NEW_TRANSACTION_BATCH', () => {
     expect(output.transactionCount).toEqual(1)
   })
   test('single transaction with error loading first transactions', () => {
-    const state = Object.assign({}, initialState, { transactionsError: true } )
+    const state = Object.assign({}, initialState, { transactionsError: true })
     const action = {
       type: 'RECEIVED_NEW_TRANSACTION_BATCH',
       msgs: [{
@@ -273,7 +273,7 @@ describe('RECEIVED_NEW_TRANSACTION_BATCH', () => {
     expect(output.transactionCount).toEqual(1)
   })
   test('single transaction while loading', () => {
-    const state = Object.assign({}, initialState, { transactionsLoading: true } )
+    const state = Object.assign({}, initialState, { transactionsLoading: true })
     const action = {
       type: 'RECEIVED_NEW_TRANSACTION_BATCH',
       msgs: [{

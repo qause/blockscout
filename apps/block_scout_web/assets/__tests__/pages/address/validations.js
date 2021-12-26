@@ -43,4 +43,3 @@ describe('RECEIVED_NEW_BLOCK', () => {
     expect(output.items).toEqual(['test 1'])
   })
 })
-

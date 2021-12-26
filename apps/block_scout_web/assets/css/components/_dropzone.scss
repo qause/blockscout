@@ -15,11 +15,11 @@
 	30%,
 	70% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 	100% {
 		opacity: 0;
@@ -43,11 +43,11 @@
 	30%,
 	70% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 	100% {
 		opacity: 0;
@@ -71,11 +71,11 @@
 	30%,
 	70% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 	100% {
 		opacity: 0;
@@ -98,11 +98,11 @@
 	}
 	30% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 }
 
@@ -117,11 +117,11 @@
 	}
 	30% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 }
 
@@ -136,11 +136,11 @@
 	}
 	30% {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		-ms-transform: translateY(0px);
-		-o-transform: translateY(0px);
-		transform: translateY(0px);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 	}
 }
 
@@ -225,7 +225,7 @@
 	min-height: 150px;
 	border: 2px solid rgba(0, 0, 0, 0.3);
 	background: white;
-	padding: 20px 20px;
+	padding: 20px;
 }
 
 .dropzone-1.dz-clickable {
